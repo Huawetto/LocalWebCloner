@@ -1,0 +1,10 @@
+# SiteCloner - dipendenze (pip install -r requirements.txt)
+
+# necessarie
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# consigliate (il programma funziona anche senza, con meno velocita'/comodita')
+lxml>=4.9.0          # parser HTML veloce (senza: html.parser integrato)
+colorama>=0.4.6      # colori nel terminale Windows
+brotli>=1.1.0        # decodifica le risposte compresse in Brotli ("br") che molti siti inviano

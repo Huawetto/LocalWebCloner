@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sitecloner"
+dynamic = ["version"]
+description = "Clona un sito web per l'uso offline e lo modifica in locale con un editor visivo integrato"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["web-scraping", "website-cloner", "offline", "wysiwyg", "mirror"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+]
+
+[project.optional-dependencies]
+full = [
+    "lxml>=4.9.0",
+    "colorama>=0.4.6",
+    "brotli>=1.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Huawetto/sitecloner"
+Issues = "https://github.com/Huawetto/sitecloner/issues"
+
+[project.scripts]
+sitecloner = "sitecloner.__main__:main"
+
+[tool.setuptools]
+packages = ["sitecloner"]
+
+[tool.setuptools.package-data]
+sitecloner = ["editor_js/*.js"]
+
+[tool.setuptools.dynamic]
+version = { attr = "sitecloner.__version__" }
