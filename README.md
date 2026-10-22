@@ -39,6 +39,7 @@ git clone https://github.com/Huawetto/sitecloner.git
 cd sitecloner
 pip install -r requirements.txt
 ```
+## Il file da scaricare è WebCloner_py.zip, va decompresso e depositato in una cartella. 
 
 Dipendenze (`requirements.txt`): `requests` e `beautifulsoup4` sono necessarie; `lxml` (parser più veloce), `colorama` (colori su Windows) e `brotli` (decodifica le risposte Brotli, che molti siti usano) sono consigliate ma facoltative.
 
